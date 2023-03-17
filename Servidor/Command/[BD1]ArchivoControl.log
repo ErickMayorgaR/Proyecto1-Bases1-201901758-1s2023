@@ -1,0 +1,79 @@
+
+SQL*Loader: Release 21.0.0.0.0 - Production on Mon Mar 20 01:47:47 2023
+Version 21.3.0.0.0
+
+Copyright (c) 1982, 2021, Oracle and/or its affiliates.  All rights reserved.
+
+Control File:   [BD1]ArchivoControl.ctl
+Character Set UTF8 specified for all input.
+First primary datafile DB_Excel.csv has a
+ utf8 byte order mark in it.
+
+Data File:      DB_Excel.csv
+  Bad File:     DB_Excel.bad
+  Discard File:  none specified
+ 
+ (Allow all discards)
+
+Number to load: ALL
+Number to skip: 0
+Errors allowed: 50
+Bind array:     100000 rows, maximum of 1048576 bytes
+Continuation:    none specified
+Path used:      Conventional
+
+Table TABLA_TEMPORAL, loaded from every logical record.
+Insert option in effect for this table: TRUNCATE
+TRAILING NULLCOLS option in effect
+
+   Column Name                  Position   Len  Term Encl Datatype
+------------------------------ ---------- ----- ---- ---- ---------------------
+NOMBRE_VICTIMA                      FIRST     *   ;       CHARACTER            
+APELLIDO_VICTIMA                     NEXT     *   ;       CHARACTER            
+DIRECCION_VICTIMA                    NEXT     *   ;       CHARACTER            
+FECHA_PRIMERA_SOSPECHA               NEXT     *   ;       DATE DD/MM/YYYY HH24:MI
+FECHA_CONFIRMACION                   NEXT     *   ;       DATE DD/MM/YYYY HH24:MI
+FECHA_MUERTE                         NEXT     *   ;       DATE DD/MM/YYYY HH24:MI
+ESTADO_VICTIMA                       NEXT     *   ;       CHARACTER            
+NOMBRE_ASOCIADO                      NEXT     *   ;       CHARACTER            
+APELLIDO_ASOCIADO                    NEXT     *   ;       CHARACTER            
+FECHA_CONOCIO                        NEXT     *   ;       DATE DD/MM/YYYY HH24:MI
+CONTACTO_FISICO                      NEXT     *   ;       CHARACTER            
+FECHA_INICIO_CONTACTO                NEXT     *   ;       DATE DD/MM/YYYY HH24:MI
+FECHA_FIN_CONTACTO                   NEXT     *   ;       DATE DD/MM/YYYY HH24:MI
+NOMBRE_HOSPITAL                      NEXT     *   ;       CHARACTER            
+DIRECCION_HOSPITAL                   NEXT     *   ;       CHARACTER            
+UBICACION_VICTIMA                    NEXT     *   ;       CHARACTER            
+FECHA_LLEGADA                        NEXT     *   ;       DATE DD/MM/YYYY HH24:MI
+FECHA_RETIRO                         NEXT     *   ;       DATE DD/MM/YYYY HH24:MI
+TRATAMIENTO                          NEXT     *   ;       CHARACTER            
+EFECTIVIDAD                          NEXT     *   ;       CHARACTER            
+FECHA_INICIO_TRATAMIENTO             NEXT     *   ;       DATE DD/MM/YYYY HH24:MI
+FECHA_FIN_TRATAMIENTO                NEXT     *   ;       DATE DD/MM/YYYY HH24:MI
+EFECTIVIDAD_EN_VICTIMA               NEXT     *   ;       CHARACTER            
+
+value used for ROWS parameter changed from 100000 to 176
+Record 1: Rejected - Error on table TABLA_TEMPORAL, column FECHA_PRIMERA_SOSPECHA.
+ORA-01858: a non-numeric character was found where a numeric was expected
+
+
+Table TABLA_TEMPORAL:
+  14032 Rows successfully loaded.
+  1 Row not loaded due to data errors.
+  0 Rows not loaded because all WHEN clauses were failed.
+  0 Rows not loaded because all fields were null.
+
+
+Space allocated for bind array:                1044384 bytes(176 rows)
+Read   buffer bytes: 1048576
+
+Total logical records skipped:          0
+Total logical records read:         14033
+Total logical records rejected:         1
+Total logical records discarded:        0
+
+Run began on Mon Mar 20 01:47:47 2023
+Run ended on Mon Mar 20 01:47:47 2023
+
+Elapsed time was:     00:00:00.64
+CPU time was:         00:00:00.00
